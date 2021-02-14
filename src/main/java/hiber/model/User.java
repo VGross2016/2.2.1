@@ -26,10 +26,6 @@ public class User {
    @JoinColumn(name="car_id")
    private Car car;
 
-//   @OneToOne(cascade = CascadeType.ALL)
-//   @PrimaryKeyJoinColumn
-//   private Car car;
-
    public User() {}
 
    public User(String firstName, String lastName, String email, Car car) {
@@ -72,12 +68,11 @@ public class User {
       this.email = email;
    }
 
+   public Car getCar() {
+      return car;
+   }
 
-//   public Car getCar() {
-//      return car;
-//   }
-//
-//   public void setCar(Car car) {
-//      this.car = car;
-//   }
+   public void setCar(Car car) {
+      this.car = car;
+   }
 }
